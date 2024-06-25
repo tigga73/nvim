@@ -10,6 +10,15 @@ if not vim.loop.fs_stat(lazypath) then
   })
 end
 vim.opt.rtp:prepend(lazypath)
+vim.api.nvim_set_keymap("n", "<F3>", ':let @+ = expand("%")<CR>', {})
+
+require("tokyonight").setup({
+  transparent = true,
+  styles = {
+    sidebars = "transparent",
+    floats = "transparent",
+  },
+})
 
 require("lazy").setup({ { import = "tiggas.plugins" }, { import = "tiggas.plugins.lsp" } }, {
   checker = {

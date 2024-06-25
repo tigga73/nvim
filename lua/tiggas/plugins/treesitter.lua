@@ -41,6 +41,7 @@ return {
         "query",
         "vimdoc",
         "c",
+        "elixir",
       },
       incremental_selection = {
         enable = true,

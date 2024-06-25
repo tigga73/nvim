@@ -21,6 +21,9 @@ keymap.set("n", "<leader>bx", ":bp <BAR> bd #<CR>", { desc = "Close current buff
 keymap.set("n", "]b", ":bnext<CR>", { desc = "Go to next buffer" }) --  go to next tab
 keymap.set("n", "[b", ":bprev<CR>", { desc = "Go to previous buffer" }) --  go to previous tab
 
+-- Telescope
+keymap.set("n", "<leader>0", ":Telescope buffers<CR>", { desc = "Show all opened buffers" })
+
 -- pressing <Esc> inside term will enter normal mode, pressing <C-[> will send
 -- <Esc> to the terminal
 keymap.set("t", "<Esc>", "<C-\\><C-n>", defaultOpts)
