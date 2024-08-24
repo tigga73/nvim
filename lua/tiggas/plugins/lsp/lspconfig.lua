@@ -81,9 +81,16 @@ return {
     mason_lspconfig.setup_handlers({
       -- default handler for installed servers
       function(server_name)
-        lspconfig[server_name].setup({
-          capabilities = capabilities,
-        })
+        if server_name == "elixirls" then
+          lspconfig[server_name].setup({
+            capabilities = capabilities,
+            cmd = { os.getenv("HOME") .. "/.local/share/nvim/mason/bin/elixir-ls" },
+          })
+        else
+          lspconfig[server_name].setup({
+            capabilities = capabilities,
+          })
+        end
       end,
     })
   end,
