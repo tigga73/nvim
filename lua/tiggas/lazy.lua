@@ -20,7 +20,10 @@ require("tokyonight").setup({
   },
 })
 
-require("lazy").setup({ { import = "tiggas.plugins" }, { import = "tiggas.plugins.lsp" } }, {
+require("lazy").setup({
+  { import = "tiggas.plugins" },
+  { import = "tiggas.plugins.lsp" },
+}, {
   checker = {
     enabled = true,
     notify = false,
