@@ -43,3 +43,6 @@ keymap.set("n", "<C-Up>", ":resize -5<CR>", { silent = true })
 
 -- Decrease height of horizontally split buffer
 keymap.set("n", "<C-Down>", ":resize +5<CR>", { silent = true })
+
+-- Copy relative path
+keymap.set("n", "<F3>", ':let @+ = expand("%")<CR>', {})
