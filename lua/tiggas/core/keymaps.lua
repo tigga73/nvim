@@ -20,7 +20,7 @@ keymap.set("n", "<leader>bo", ":enew<CR>", { desc = "Open new buffer" }) -- open
 keymap.set("n", "<leader>bx", ":bp <BAR> bd #<CR>", { desc = "Close current buffer" }) -- close current tab
 keymap.set("n", "]b", ":bnext<CR>", { desc = "Go to next buffer" }) --  go to next tab
 keymap.set("n", "[b", ":bprev<CR>", { desc = "Go to previous buffer" }) --  go to previous tab
-keymap.set("n", "<leader><leader>", ":bprevious<CR>", { noremap = true, silent = true })
+keymap.set("n", "<leader><leader>", ":bprevious<CR>", { desc = "Go to previous buffer", noremap = true, silent = true })
 
 -- pressing <Esc> inside term will enter normal mode, pressing <C-[> will send
 -- <Esc> to the terminal
