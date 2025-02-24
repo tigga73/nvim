@@ -12,7 +12,7 @@ opts.softtabstop = 2
 opts.shiftwidth = 2
 
 -- line wrapping
-opts.wrap = false -- disable line wrapping
+opts.wrap = false -- able line wrapping
 
 -- cursor line
 opts.cursorline = true -- highlight the current cursor line
@@ -34,9 +34,10 @@ opts.splitbelow = true
 opts.splitright = true
 
 -- allow for :find <file> to search in subdirectories
-opts.path = opts.path .. '**'
+opts.path = opts.path .. "**"
+
 -- ignore node_modules
-opts.wildignore = opts.wildignore .. '*/node_modules/*'
+opts.wildignore = opts.wildignore .. "*/node_modules/*"
 
 -- keep undo history in the disk so it persists between sessions
 opts.undofile = true
