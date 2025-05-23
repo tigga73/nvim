@@ -44,3 +44,15 @@ keymap.set("n", "<C-Down>", ":resize +5<CR>", { silent = true })
 
 -- Copy relative path
 keymap.set("n", "<F3>", ':let @+ = expand("%")<CR>', {})
+
+-- macros
+local esc = vim.api.nvim_replace_termcodes("<Esc>", true, true, true)
+
+vim.api.nvim_create_augroup("JSLogMacro", { clear = true })
+vim.api.nvim_create_autocmd("FileType", {
+  group = "JSLogMacro",
+  pattern = { "javascript", "typescript" },
+  callback = function()
+    vim.fn.setreg("l", "yOconsole.log('" .. esc .. "pa:'," .. esc .. "pa)" .. esc .. "")
+  end,
+})
